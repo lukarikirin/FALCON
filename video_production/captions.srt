@@ -27,12 +27,12 @@ FALCON looks for that pattern in every frame,
 and checks each match.
 
 8
-00:00:26,513 --> 00:00:28,828
-Here, it locks on for about a second,
+00:00:26,513 --> 00:00:28,401
+It locks on and tracks the ball,
 
 9
-00:00:28,848 --> 00:00:30,557
-then loses it again.
+00:00:28,421 --> 00:00:30,940
+until the match gets too messy to trust.
 
 10
 00:00:33,400 --> 00:00:34,883
@@ -99,5 +99,5 @@ Just signals, a custom F F T, and a Kalman filter, on a C P U.
 FALCON, from Signal Thirteen.
 
 26
-00:01:15,150 --> 00:01:18,437
-Built by Abu Bakar Siddique and Wahidul Hoque.
+00:01:15,150 --> 00:01:17,413
+Built by team Signal Thirteen.

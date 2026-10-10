@@ -19,7 +19,8 @@ Burned-in captions plus `captions.srt`. Rebuild with `make_video.sh <work_dir>`.
 
 Changes from the brief, recorded in `storyboard.json`:
 - Shot 4 runs 12 s, not 14 s, and shot 8 runs 10 s, not 14 s, because the frisbee clip is never slowed. The 6 s saved go to shot 9 for the author credits. The total is still 80 s.
-- Shot 4 adds one honest line: "Here, it locks on for about a second, then loses it again."
+- Shot 4 adds: "It locks on and tracks the ball, until the match gets too messy to trust."
+- The closing credit line names the team: "Built by team Signal Thirteen."
 - The 3 s template-adaptation beat from the 45 s cut is dropped for pacing, as the brief asks.
 
 ## What the tracker actually did (`evidence/*_track.json`)

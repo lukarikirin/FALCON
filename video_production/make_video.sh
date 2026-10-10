@@ -10,6 +10,6 @@ python3 "$HERE/narration.py" "$WORK/tts" "$WORK/vo"
 python3 "$HERE/render_video.py" "$WORK"
 python3 "$HERE/audio_mix.py" "$WORK"
 mkdir -p "$HERE/output"
-ffmpeg -v error -y -i "$WORK/picture.mp4" -i "$WORK/soundtrack.wav" -map 0:v -map 1:a -c:v copy \
+ffmpeg -v error -y -i "$WORK/picture.mp4" -i "$WORK/soundtrack.wav" -map 0:v -map 1:a -c:v libx264 -preset slow -crf 21 -pix_fmt yuv420p \
   -c:a aac -b:a 192k -ar 48000 -t 80 -movflags +faststart "$HERE/output/FALCON_Signal13_80s.mp4"
 python3 "$HERE/verify_render.py"

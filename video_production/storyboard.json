@@ -92,10 +92,10 @@
     "You pick the ball.",
     "FALCON looks for that pattern in every frame,",
     "and checks each match.",
-    "Here, it locks on for about a second,",
-    "then loses it again."
+    "It locks on and tracks the ball,",
+    "until the match gets too messy to trust."
    ],
-   "speak": "You pick the ball. FALCON looks for that pattern in every frame, and checks each match. Here, it locks on for about a second, then loses it again."
+   "speak": "You pick the ball. FALCON looks for that pattern in every frame, and checks each match. It locks on and tracks the ball, until the match gets too messy to trust."
   },
   {
    "shot": "s5",
@@ -146,9 +146,9 @@
   {
    "shot": "s9b",
    "phrases": [
-    "Built by Abu Bakar Siddique and Wahidul Hoque."
+    "Built by team Signal Thirteen."
    ],
-   "speak": "Built by Abu Bakar Siddique and Wahidul Hoque."
+   "speak": "Built by team Signal Thirteen."
   }
  ],
  "retime_note": "Shot 4 shortened 14 s -> 12 s and shot 8 shortened 14 s -> 10 s (clip is 7.37 s, never slowed); the 6 s go to shot 9 for the author credits. Total stays 80 s.",

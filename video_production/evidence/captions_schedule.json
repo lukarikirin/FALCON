@@ -50,17 +50,17 @@
  },
  {
   "shot": "s4",
-  "text": "Here, it locks on for about a second,",
+  "text": "It locks on and tracks the ball,",
   "wav": "s4_3.wav",
   "start": 26.513,
-  "end": 28.668
+  "end": 28.241
  },
  {
   "shot": "s4",
-  "text": "then loses it again.",
+  "text": "until the match gets too messy to trust.",
   "wav": "s4_4.wav",
-  "start": 28.848,
-  "end": 30.107
+  "start": 28.421,
+  "end": 30.49
  },
  {
   "shot": "s5",
@@ -176,9 +176,9 @@
  },
  {
   "shot": "s9b",
-  "text": "Built by Abu Bakar Siddique and Wahidul Hoque.",
+  "text": "Built by team Signal Thirteen.",
   "wav": "s9b_0.wav",
   "start": 75.15,
-  "end": 77.987
+  "end": 76.963
  }
 ]
