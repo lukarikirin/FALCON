@@ -1,0 +1,184 @@
+[
+ {
+  "shot": "s2",
+  "text": "Can we track that ball...",
+  "wav": "s2_0.wav",
+  "start": 12.6,
+  "end": 13.901
+ },
+ {
+  "shot": "s2",
+  "text": "without machine learning?",
+  "wav": "s2_1.wav",
+  "start": 14.081,
+  "end": 15.404
+ },
+ {
+  "shot": "s3",
+  "text": "Yes. Using only signals.",
+  "wav": "s3_0.wav",
+  "start": 17.15,
+  "end": 18.878
+ },
+ {
+  "shot": "s3",
+  "text": "Meet FALCON.",
+  "wav": "s3_1.wav",
+  "start": 19.058,
+  "end": 20.039
+ },
+ {
+  "shot": "s4",
+  "text": "You pick the ball.",
+  "wav": "s4_0.wav",
+  "start": 21.3,
+  "end": 22.367
+ },
+ {
+  "shot": "s4",
+  "text": "FALCON looks for that pattern in every frame,",
+  "wav": "s4_1.wav",
+  "start": 22.547,
+  "end": 24.894
+ },
+ {
+  "shot": "s4",
+  "text": "and checks each match.",
+  "wav": "s4_2.wav",
+  "start": 25.074,
+  "end": 26.333
+ },
+ {
+  "shot": "s4",
+  "text": "Here, it locks on for about a second,",
+  "wav": "s4_3.wav",
+  "start": 26.513,
+  "end": 28.668
+ },
+ {
+  "shot": "s4",
+  "text": "then loses it again.",
+  "wav": "s4_4.wav",
+  "start": 28.848,
+  "end": 30.107
+ },
+ {
+  "shot": "s5",
+  "text": "Here's the easy part.",
+  "wav": "s5_0.wav",
+  "start": 33.4,
+  "end": 34.723
+ },
+ {
+  "shot": "s5",
+  "text": "Any picture is just waves,",
+  "wav": "s5_1.wav",
+  "start": 34.903,
+  "end": 36.482
+ },
+ {
+  "shot": "s5",
+  "text": "basic sine and cosine, added together.",
+  "wav": "s5_2.wav",
+  "start": 36.662,
+  "end": 39.179
+ },
+ {
+  "shot": "s5",
+  "text": "Compare the waves,",
+  "wav": "s5_3.wav",
+  "start": 39.359,
+  "end": 40.447
+ },
+ {
+  "shot": "s5",
+  "text": "and the best match lights up.",
+  "wav": "s5_4.wav",
+  "start": 40.627,
+  "end": 42.12
+ },
+ {
+  "shot": "s6",
+  "text": "Then it predicts where to look next,",
+  "wav": "s6_0.wav",
+  "start": 45.3,
+  "end": 47.007
+ },
+ {
+  "shot": "s6",
+  "text": "and verifies the match.",
+  "wav": "s6_1.wav",
+  "start": 47.187,
+  "end": 48.574
+ },
+ {
+  "shot": "s7",
+  "text": "If the match isn't convincing, it searches again.",
+  "wav": "s7_0.wav",
+  "start": 51.12,
+  "end": 53.915
+ },
+ {
+  "shot": "s7",
+  "text": "That takes time, and success isn't guaranteed.",
+  "wav": "s7_1.wav",
+  "start": 54.095,
+  "end": 56.847
+ },
+ {
+  "shot": "s8",
+  "text": "A new target. A frisbee, thrown toward a dog.",
+  "wav": "s8_0.wav",
+  "start": 57.3,
+  "end": 60.159
+ },
+ {
+  "shot": "s8",
+  "text": "It's small, it spins, and it changes size.",
+  "wav": "s8_1.wav",
+  "start": 60.339,
+  "end": 62.814
+ },
+ {
+  "shot": "s8",
+  "text": "The same method follows it,",
+  "wav": "s8_2.wav",
+  "start": 62.994,
+  "end": 64.53
+ },
+ {
+  "shot": "s8",
+  "text": "until the catch makes it too hard.",
+  "wav": "s8_3.wav",
+  "start": 64.71,
+  "end": 66.459
+ },
+ {
+  "shot": "s9",
+  "text": "No machine learning.",
+  "wav": "s9_0.wav",
+  "start": 67.2,
+  "end": 68.459
+ },
+ {
+  "shot": "s9",
+  "text": "Just signals, a custom F F T, and a Kalman filter, on a C P U.",
+  "wav": "s9_1.wav",
+  "start": 68.639,
+  "end": 73.034
+ },
+ {
+  "shot": "s9",
+  "text": "FALCON, from Signal Thirteen.",
+  "wav": "s9_2.wav",
+  "start": 73.214,
+  "end": 75.091
+ },
+ {
+  "shot": "s9b",
+  "text": "Built by Abu Bakar Siddique and Wahidul Hoque.",
+  "wav": "s9b_0.wav",
+  "start": 75.15,
+  "end": 77.987
+ }
+]

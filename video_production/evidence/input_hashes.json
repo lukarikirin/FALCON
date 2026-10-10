@@ -1,0 +1,27 @@
+{
+ "input_video/intro.mp4": {
+  "sha256": "2d3de65f130d146f7650856b5d1da4eaae92292b2782c8f4411ce32ab90cd881",
+  "bytes": 8086598,
+  "probe": "1280x720 h264 25 fps, AAC 44.1 kHz stereo, 13.44 s; used 0.00-12.00 s"
+ },
+ "input_video/messi-free_kick.mp4": {
+  "sha256": "9e001179f44489517f86088e03da264ce39551a539bb2f0fbde79ffb6e82c3c4",
+  "bytes": 4585780
+ },
+ "input_video/messi_free_kick.png": {
+  "sha256": "7b508367b1ca58bdd876c75e8aee4d46d0c2a29749d4d22aa61d485e536ec512",
+  "bytes": 1140778
+ },
+ "input_video/frisbee_throw.mp4": {
+  "sha256": "3ad8e6c28bffcc306b737bf4bdf534f0d00610da632d2531e0e72b01c6e8a7b6",
+  "bytes": 296968
+ },
+ "Authors_pic/Abu Bakar Siddique.jpeg": {
+  "sha256": "2f232f42d713398744b27eade27318f6041f884997a8820de098218809c4356d",
+  "bytes": 196627
+ },
+ "Authors_pic/Wahidul Hoque.jpg": {
+  "sha256": "21fca87bff05d0b4f42c6142706e83e3229c0c71131a20c7e60a222bd9c9e06e",
+  "bytes": 186218
+ }
+}

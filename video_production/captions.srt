@@ -1,0 +1,103 @@
+1
+00:00:12,600 --> 00:00:14,061
+Can we track that ball...
+
+2
+00:00:14,081 --> 00:00:15,854
+without machine learning?
+
+3
+00:00:17,150 --> 00:00:19,038
+Yes. Using only signals.
+
+4
+00:00:19,058 --> 00:00:20,489
+Meet FALCON.
+
+5
+00:00:21,300 --> 00:00:22,527
+You pick the ball.
+
+6
+00:00:22,547 --> 00:00:25,054
+FALCON looks for that pattern in every frame,
+
+7
+00:00:25,074 --> 00:00:26,493
+and checks each match.
+
+8
+00:00:26,513 --> 00:00:28,828
+Here, it locks on for about a second,
+
+9
+00:00:28,848 --> 00:00:30,557
+then loses it again.
+
+10
+00:00:33,400 --> 00:00:34,883
+Here's the easy part.
+
+11
+00:00:34,903 --> 00:00:36,642
+Any picture is just waves,
+
+12
+00:00:36,662 --> 00:00:39,339
+basic sine and cosine, added together.
+
+13
+00:00:39,359 --> 00:00:40,607
+Compare the waves,
+
+14
+00:00:40,627 --> 00:00:42,570
+and the best match lights up.
+
+15
+00:00:45,300 --> 00:00:47,167
+Then it predicts where to look next,
+
+16
+00:00:47,187 --> 00:00:49,024
+and verifies the match.
+
+17
+00:00:51,120 --> 00:00:54,075
+If the match isn't convincing, it searches again.
+
+18
+00:00:54,095 --> 00:00:57,280
+That takes time, and success isn't guaranteed.
+
+19
+00:00:57,300 --> 00:01:00,319
+A new target. A frisbee, thrown toward a dog.
+
+20
+00:01:00,339 --> 00:01:02,974
+It's small, it spins, and it changes size.
+
+21
+00:01:02,994 --> 00:01:04,690
+The same method follows it,
+
+22
+00:01:04,710 --> 00:01:06,909
+until the catch makes it too hard.
+
+23
+00:01:07,200 --> 00:01:08,619
+No machine learning.
+
+24
+00:01:08,639 --> 00:01:13,194
+Just signals, a custom F F T, and a Kalman filter, on a C P U.
+
+25
+00:01:13,214 --> 00:01:15,130
+FALCON, from Signal Thirteen.
+
+26
+00:01:15,150 --> 00:01:18,437
+Built by Abu Bakar Siddique and Wahidul Hoque.

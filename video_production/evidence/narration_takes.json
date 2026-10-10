@@ -1,0 +1,180 @@
+{
+ "voice": "af_heart",
+ "speed": 1.0,
+ "takes": {
+  "s2": [
+   {
+    "text": "Can we track that ball...",
+    "wav": "s2_0.wav",
+    "dur": 1.301,
+    "sr": 24000
+   },
+   {
+    "text": "without machine learning?",
+    "wav": "s2_1.wav",
+    "dur": 1.323,
+    "sr": 24000
+   }
+  ],
+  "s3": [
+   {
+    "text": "Yes. Using only signals.",
+    "wav": "s3_0.wav",
+    "dur": 1.728,
+    "sr": 24000
+   },
+   {
+    "text": "Meet FALCON.",
+    "wav": "s3_1.wav",
+    "dur": 0.981,
+    "sr": 24000
+   }
+  ],
+  "s4": [
+   {
+    "text": "You pick the ball.",
+    "wav": "s4_0.wav",
+    "dur": 1.067,
+    "sr": 24000
+   },
+   {
+    "text": "FALCON looks for that pattern in every frame,",
+    "wav": "s4_1.wav",
+    "dur": 2.347,
+    "sr": 24000
+   },
+   {
+    "text": "and checks each match.",
+    "wav": "s4_2.wav",
+    "dur": 1.259,
+    "sr": 24000
+   },
+   {
+    "text": "Here, it locks on for about a second,",
+    "wav": "s4_3.wav",
+    "dur": 2.155,
+    "sr": 24000
+   },
+   {
+    "text": "then loses it again.",
+    "wav": "s4_4.wav",
+    "dur": 1.259,
+    "sr": 24000
+   }
+  ],
+  "s5": [
+   {
+    "text": "Here's the easy part.",
+    "wav": "s5_0.wav",
+    "dur": 1.323,
+    "sr": 24000
+   },
+   {
+    "text": "Any picture is just waves,",
+    "wav": "s5_1.wav",
+    "dur": 1.579,
+    "sr": 24000
+   },
+   {
+    "text": "basic sine and cosine, added together.",
+    "wav": "s5_2.wav",
+    "dur": 2.517,
+    "sr": 24000
+   },
+   {
+    "text": "Compare the waves,",
+    "wav": "s5_3.wav",
+    "dur": 1.088,
+    "sr": 24000
+   },
+   {
+    "text": "and the best match lights up.",
+    "wav": "s5_4.wav",
+    "dur": 1.493,
+    "sr": 24000
+   }
+  ],
+  "s6": [
+   {
+    "text": "Then it predicts where to look next,",
+    "wav": "s6_0.wav",
+    "dur": 1.707,
+    "sr": 24000
+   },
+   {
+    "text": "and verifies the match.",
+    "wav": "s6_1.wav",
+    "dur": 1.387,
+    "sr": 24000
+   }
+  ],
+  "s7": [
+   {
+    "text": "If the match isn't convincing, it searches again.",
+    "wav": "s7_0.wav",
+    "dur": 2.795,
+    "sr": 24000
+   },
+   {
+    "text": "That takes time, and success isn't guaranteed.",
+    "wav": "s7_1.wav",
+    "dur": 2.752,
+    "sr": 24000
+   }
+  ],
+  "s8": [
+   {
+    "text": "A new target. A frisbee, thrown toward a dog.",
+    "wav": "s8_0.wav",
+    "dur": 2.859,
+    "sr": 24000
+   },
+   {
+    "text": "It's small, it spins, and it changes size.",
+    "wav": "s8_1.wav",
+    "dur": 2.475,
+    "sr": 24000
+   },
+   {
+    "text": "The same method follows it,",
+    "wav": "s8_2.wav",
+    "dur": 1.536,
+    "sr": 24000
+   },
+   {
+    "text": "until the catch makes it too hard.",
+    "wav": "s8_3.wav",
+    "dur": 1.749,
+    "sr": 24000
+   }
+  ],
+  "s9": [
+   {
+    "text": "No machine learning.",
+    "wav": "s9_0.wav",
+    "dur": 1.259,
+    "sr": 24000
+   },
+   {
+    "text": "Just signals, a custom F F T, and a Kalman filter, on a C P U.",
+    "wav": "s9_1.wav",
+    "dur": 4.395,
+    "sr": 24000
+   },
+   {
+    "text": "FALCON, from Signal Thirteen.",
+    "wav": "s9_2.wav",
+    "dur": 1.877,
+    "sr": 24000
+   }
+  ],
+  "s9b": [
+   {
+    "text": "Built by Abu Bakar Siddique and Wahidul Hoque.",
+    "wav": "s9b_0.wav",
+    "dur": 2.837,
+    "sr": 24000
+   }
+  ]
+ }
+}
