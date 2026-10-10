@@ -110,15 +110,15 @@
   ],
   "s7": [
    {
-    "text": "If the match isn't convincing, it searches again.",
+    "text": "Then a sliding window scans the frame,",
     "wav": "s7_0.wav",
-    "dur": 2.795,
+    "dur": 2.069,
     "sr": 24000
    },
    {
-    "text": "That takes time, and success isn't guaranteed.",
+    "text": "tile by tile, until it finds the target.",
     "wav": "s7_1.wav",
-    "dur": 2.752,
+    "dur": 2.432,
     "sr": 24000
    }
   ],

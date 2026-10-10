@@ -667,48 +667,95 @@ def shot6(f):
 
 # ======================================================================== shot 7: search again
 GRID_C, GRID_R = 10, 5
-_rng = np.random.default_rng(13)
-BATCHES = [list(_rng.choice(GRID_C * GRID_R, size=int(_rng.integers(1, 5)), replace=False)) for _ in range(30)]
+SCAN_START, SCAN_EVERY, SCAN_BATCH = 56, 10, 4   # 4 tiles per step, checked in order (like the tracker)
+TARGET_TILE = 37                                  # where the illustrated target sits
+FOUND_AT = SCAN_START + SCAN_EVERY * (TARGET_TILE // SCAN_BATCH)
 
 
 def shot7(f):
     img = canvas()
-    header(img, f, '04 / RECOVERY', 'No match? Search again.')
+    header(img, f, '04 / SEARCH', 'Sliding-window search.')
     d = D(img)
     chip(d, 1880, 82, 'CONCEPTUAL', AMBER, 1, 17, anchor='r')
     gx0, gy0, gx1, gy1 = 120, 200, 1360, 860
     cx, cy = (gx0 + gx1) / 2, (gy0 + gy1) / 2
     if f < 34:
         r = 70
-        shake = 6 * math.sin(f * 2.2) * (1 - prog(f, 6, 24))
         a = 1 - prog(f, 22, 34)
-        dashed_rect(d, (cx - r + shake, cy - r, cx + r + shake, cy + r), AMBER, a, 10, 7, 3)
-        text(d, (cx, cy + 110), '✕  match not convincing', font('monob', 26), AMBER, anchor='mm', alpha=a)
+        dashed_rect(d, (cx - r, cy - r, cx + r, cy + r), AMBER, a * (0.5 + 0.5 * math.cos(f * 0.6)), 10, 7, 3)
+        text(d, (cx, cy + 110), 'Confidence drops  →  widen the search', font('monob', 26), AMBER, anchor='mm', alpha=a)
     tg = ease_out(prog(f, 26, 52))
+    found = f >= FOUND_AT
     if tg > 0:
         cw, ch = (gx1 - gx0) / GRID_C, (gy1 - gy0) / GRID_R
-        step = int((f - 56) // 7) if f >= 56 else -1
-        lit = set(BATCHES[step % len(BATCHES)]) if step >= 0 else set()
+        step = (f - SCAN_START) // SCAN_EVERY if f >= SCAN_START else -1
+        if found:
+            step = TARGET_TILE // SCAN_BATCH
+        window = set(range(step * SCAN_BATCH, step * SCAN_BATCH + SCAN_BATCH)) if step >= 0 else set()
         for i in range(GRID_R):
             for j in range(GRID_C):
+                k = i * GRID_C + j
                 x0 = lerp(cx, gx0 + j * cw, tg) + 4
                 y0 = lerp(cy, gy0 + i * ch, tg) + 4
                 x1, y1 = x0 + (cw - 8) * tg, y0 + (ch - 8) * tg
-                on = (i * GRID_C + j) in lit
-                d.rounded_rectangle([x0, y0, x1, y1], radius=6,
-                                    fill=rgba(MINT, 0.22) if on else rgba(PANEL, 0.95),
-                                    outline=rgba(MINT, 0.95) if on else rgba(BORDER, 1), width=3 if on else 2)
-        text(d, (gx0, gy1 + 22), 'Illustrated tile batches · 1–4 tiles per frame · fixed reference template',
+                checked = step >= 0 and k < step * SCAN_BATCH
+                if k == TARGET_TILE and found:
+                    continue
+                if k in window:
+                    fill, out, wd = rgba(MINT, 0.22), rgba(MINT, 0.95), 3
+                elif checked:
+                    fill, out, wd = rgba(MINT, 0.06), rgba(MINT_DIM, 0.6), 2
+                else:
+                    fill, out, wd = rgba(PANEL, 0.95), rgba(BORDER, 1), 2
+                d.rounded_rectangle([x0, y0, x1, y1], radius=6, fill=fill, outline=out, width=wd)
+        # the sliding window frame itself, gliding between steps
+        if step >= 0 and not found:
+            t = ease_in_out(prog((f - SCAN_START) % SCAN_EVERY, 0, 5))
+            k0 = step * SCAN_BATCH
+            prev = max(k0 - SCAN_BATCH, 0)
+            def box(k):
+                i, j = divmod(k, GRID_C)
+                n = min(SCAN_BATCH, GRID_C - j)
+                return (gx0 + j * cw, gy0 + i * ch, gx0 + (j + n) * cw, gy0 + (i + 1) * ch)
+            b0, b1 = box(prev), box(k0)
+            if b0[1] != b1[1]:
+                b0 = b1
+            bb = tuple(lerp(p, q, t) for p, q in zip(b0, b1))
+            layer = Image.new('RGBA', img.size, (0, 0, 0, 0))
+            corners(D(layer), (bb[0] - 4, bb[1] - 4, bb[2] + 4, bb[3] + 4), MINT, 1, 24, 4)
+            glow(img, layer, 8)
+            d = D(img)
+        # the target tile
+        i, j = divmod(TARGET_TILE, GRID_C)
+        tx0, ty0 = gx0 + j * cw + 4, gy0 + i * ch + 4
+        if found:
+            tf = back_out(prog(f, FOUND_AT, FOUND_AT + 14))
+            layer = Image.new('RGBA', img.size, (0, 0, 0, 0))
+            ld = D(layer)
+            ld.rounded_rectangle([tx0, ty0, tx0 + cw - 8, ty0 + ch - 8], radius=6, fill=rgba(MINT, 0.3),
+                                 outline=rgba(MINT, 1), width=4)
+            pulse = (f - FOUND_AT) % 24 / 24
+            ring(ld, tx0 + (cw - 8) / 2, ty0 + (ch - 8) / 2, 50 + 70 * pulse, MINT, 1 - pulse, 3)
+            glow(img, layer, 12)
+            sz = max(2, int(84 * clamp(tf, 0.01, 1.2)))
+            tile = Image.fromarray(CROP).resize((sz, sz), Image.NEAREST)
+            comp(img, tile, (tx0 + (cw - 8 - sz) / 2, ty0 + (ch - 8 - sz) / 2))
+            d = D(img)
+        text(d, (gx0, gy1 + 22), 'Illustrated · tiles checked in order, a few per frame · fixed reference template',
              font('mono', 16), MUTED, alpha=tg)
     sx = 1430
     t1 = ease_out(prog(f, 40, 56))
-    chip(d, sx, 220, 'SEARCHING', AMBER, t1, 20)
-    text(d, (sx, 290), 'Search again.', font('black', 54), TEXT, alpha=t1)
-    text(d, (sx, 360), 'Check regions.', font('reg', 26), MUTED, alpha=t1)
-    text(d, (sx, 394), 'Keep scanning.', font('reg', 26), MUTED, alpha=t1)
-    t2 = ease_out(prog(f, 96, 112))
-    text(d, (sx, 480), 'Recovery takes time.', font('semi', 28), AMBER, alpha=t2)
-    text(d, (sx, 516), 'It is not guaranteed.', font('semi', 28), AMBER, alpha=t2)
+    if not found and t1 > 0.01:
+        chip(d, sx, 220, 'SEARCHING', AMBER, t1, 20)
+    else:
+        chip(d, sx, 220, 'TRACKING', MINT, 1, 20)
+    text(d, (sx, 290), 'Slide and scan.', font('black', 54), TEXT, alpha=t1)
+    text(d, (sx, 360), 'Tile by tile,', font('reg', 26), MUTED, alpha=t1)
+    text(d, (sx, 394), 'across the whole frame.', font('reg', 26), MUTED, alpha=t1)
+    text(d, (sx, 428), 'It keeps going.', font('reg', 26), MUTED, alpha=t1)
+    t2 = ease_out(prog(f, FOUND_AT, FOUND_AT + 14))
+    text(d, (sx, 510), 'Target found.', font('semi', 34), MINT, alpha=t2)
+    text(d, (sx, 552), 'Back to tracking.', font('semi', 28), TEXT, alpha=t2)
     if f < 10:
         k = 1 - prog(f, 0, 10)
         arr = shift_x(motion_blur_x(np.asarray(img.convert('RGB')), 70 * k), W * 0.2 * k ** 2)

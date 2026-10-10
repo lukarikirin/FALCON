@@ -168,6 +168,10 @@ def main():
     place(sfx, tone(330, 0.5, 0.08, 6), 27.13)            # Messi: lock lost (source frame 91)
     for t in (32.75, 39.4, 44.75, 50.75):                          # whip transitions
         place(sfx, whoosh(0.55, True, 0.25), t)
+    for k in range(9):                                    # sliding-window steps (shot 7)
+        place(sfx, tone(1900, 0.05, 0.04, 60), 52.87 + k / 3)
+    for k, fr in enumerate((1319, 1760)):                 # target found (shot 7, local frame 146)
+        place(sfx, tone(fr, 0.5, 0.08, 7), 55.87 + k * 0.09)
     place(sfx, tone(1320, 0.4, 0.08, 9), 57.5)            # frisbee selected
     place(sfx, tone(330, 0.5, 0.08, 6), 62.37)            # frisbee: match lost at the catch
     place(sfx, boom(0.35), 67.0)                          # brand close

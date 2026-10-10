@@ -113,17 +113,17 @@
  },
  {
   "shot": "s7",
-  "text": "If the match isn't convincing, it searches again.",
+  "text": "Then a sliding window scans the frame,",
   "wav": "s7_0.wav",
-  "start": 51.12,
-  "end": 53.915
+  "start": 51.45,
+  "end": 53.519
  },
  {
   "shot": "s7",
-  "text": "That takes time, and success isn't guaranteed.",
+  "text": "tile by tile, until it finds the target.",
   "wav": "s7_1.wav",
-  "start": 54.095,
-  "end": 56.847
+  "start": 53.699,
+  "end": 56.131
  },
  {
   "shot": "s8",

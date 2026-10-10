@@ -63,12 +63,12 @@ Then it predicts where to look next,
 and verifies the match.
 
 17
-00:00:51,120 --> 00:00:54,075
-If the match isn't convincing, it searches again.
+00:00:51,450 --> 00:00:53,679
+Then a sliding window scans the frame,
 
 18
-00:00:54,095 --> 00:00:57,280
-That takes time, and success isn't guaranteed.
+00:00:53,699 --> 00:00:56,581
+tile by tile, until it finds the target.
 
 19
 00:00:57,300 --> 00:01:00,319

@@ -13,7 +13,7 @@ Burned-in captions plus `captions.srt`. Rebuild with `make_video.sh <work_dir>`.
 | 4 | 0:21–0:33 | Messi: reference-image selection → genuine run → replay (2× zoom) → paused on accepted frame 78 |
 | 5 | 0:33–0:45 | CONCEPTUAL sine/cosine waves; the crop is rebuilt from its waves with the repo's custom FFT; the peak is the **actual** correlation surface from Messi frame 78 |
 | 6 | 0:45–0:51 | CONCEPTUAL Predict → Verify (Kalman prediction, PSR + NCC checks) |
-| 7 | 0:51–0:57 | CONCEPTUAL global search grid, "Recovery is not guaranteed" |
+| 7 | 0:51–0:57 | CONCEPTUAL sliding-window search: tiles checked in order, a few per frame, until the target is found and tracking resumes |
 | 8 | 0:57–1:07 | Frisbee: selection freeze, full 7.37 s clip at native speed, paused on the final real frame |
 | 9 | 1:07–1:20 | Brand close, then author portraits from `Authors_pic/`; last 2 s still |
 
