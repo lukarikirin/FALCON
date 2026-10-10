@@ -169,16 +169,9 @@
  },
  {
   "shot": "s9",
-  "text": "FALCON, from Signal Thirteen.",
+  "text": "FALCON, from team Signal Thirteen.",
   "wav": "s9_2.wav",
   "start": 73.214,
-  "end": 75.091
- },
- {
-  "shot": "s9b",
-  "text": "Built by team Signal Thirteen.",
-  "wav": "s9b_0.wav",
-  "start": 75.15,
-  "end": 76.963
+  "end": 75.283
  }
 ]

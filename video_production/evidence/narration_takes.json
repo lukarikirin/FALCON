@@ -162,17 +162,9 @@
     "sr": 24000
    },
    {
-    "text": "FALCON, from Signal Thirteen.",
+    "text": "FALCON, from team Signal Thirteen.",
     "wav": "s9_2.wav",
-    "dur": 1.877,
-    "sr": 24000
-   }
-  ],
-  "s9b": [
-   {
-    "text": "Built by team Signal Thirteen.",
-    "wav": "s9b_0.wav",
-    "dur": 1.813,
+    "dur": 2.069,
     "sr": 24000
    }
   ]
